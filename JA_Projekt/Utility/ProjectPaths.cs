@@ -9,8 +9,8 @@ namespace JA_Projekt.Utility
 {
     internal class ProjectPaths
     {
-        public const string AssemblyDllPath = "D:\\Projekty\\HighPassFilter\\x64\\Debug\\ASM.dll";
-        public const string CppDllPath = "D:\\Projekty\\HighPassFilter\\x64\\Release\\CPP.dll";
+        public const string AssemblyDllPath = "..\\x64\\Debug\\ASM.dll";
+        public const string CppDllPath = "..\\x64\\Release\\CPP.dll";
 
         string imageFileName;
         string directoryPath;
