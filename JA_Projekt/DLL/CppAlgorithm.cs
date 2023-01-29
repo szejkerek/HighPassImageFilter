@@ -10,7 +10,7 @@ namespace JA_Projekt.DLL
 {
     internal class CppAlgorithm : Algorithm
     {
-        [DllImport($"{ProjectPaths.CppDllPath}")]
+        [DllImport("CPP.dll", CallingConvention = CallingConvention.Cdecl)]
         static extern int ExecuteInCpp(byte[] oldPixels, byte[] newPixels, int startingIndex, int endIndex, int width);
 
         public override void CalculatePixel(byte[] oldPixels, byte[] newPixels, int startingIndex, int endIndex, int width)

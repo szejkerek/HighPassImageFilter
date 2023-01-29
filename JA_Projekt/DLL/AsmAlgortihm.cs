@@ -10,7 +10,7 @@ namespace JA_Projekt.DLL
 {
     internal class AsmAlgortihm : Algorithm
     {
-        [DllImport($"{ProjectPaths.AssemblyDllPath}")]
+        [DllImport("ASM.dll", CallingConvention = CallingConvention.Cdecl)]
         static extern int ExecuteInAssembly(byte[] oldPixels, byte[] newPixels, int startingIndex, int endIndex, int width);
 
         public override void CalculatePixel(byte[] oldPixels, byte[] newPixels, int startingIndex, int endIndex, int width)
