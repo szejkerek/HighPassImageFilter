@@ -8,14 +8,8 @@
 *.user
 *.sln.docstates
 
-# Build results
-
-[Dd]ebug/
-[Rr]elease/
-x64/
 #Images_after/
 #Images_before/
-[Oo]bj/
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
