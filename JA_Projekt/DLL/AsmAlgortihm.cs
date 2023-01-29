@@ -1,10 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿//
+// Author: Bartłomiej Gordon sem.5 2022/2023
+//
+// Topic: Implementation of High - Pass image filter in both: CPPand
+//        ASM with time comparison using given convolution mask:
+//
+//		-1 - 1 - 1
+//		-1   9 - 1
+//		-1 - 1 - 1
+//
+// ASM DLL importer
+
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using JA_Projekt.Utility;
 
 namespace JA_Projekt.DLL
 {

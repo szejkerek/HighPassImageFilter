@@ -1,10 +1,18 @@
-﻿using System;
+﻿//
+// Author: Bartłomiej Gordon sem.5 2022/2023
+//
+// Topic: Implementation of High - Pass image filter in both: CPPand
+//        ASM with time comparison using given convolution mask:
+//
+//		-1 - 1 - 1
+//		-1   9 - 1
+//		-1 - 1 - 1
+//
+// Implementation of of interface for Bitmap class
+
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
-using System.Threading.Channels;
-
-using JA_Projekt.Utility;
 
 namespace JA_Projekt.Main
 {

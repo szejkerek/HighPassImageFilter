@@ -1,15 +1,18 @@
-﻿using JA_Projekt.Utility.Benchmark;
-using System;
-using System.Collections.Generic;
+﻿//
+// Author: Bartłomiej Gordon sem.5 2022/2023
+//
+// Topic: Implementation of High - Pass image filter in both: CPPand
+//        ASM with time comparison using given convolution mask:
+//
+//		-1 - 1 - 1
+//		-1   9 - 1
+//		-1 - 1 - 1
+//
+// User interface class 
+
+using JA_Projekt.Utility.Benchmark;
 using System.Drawing;
-using System.Drawing.Imaging;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Threading;
 using JA_Projekt.DLL;
-using System.Timers;
 using JA_Projekt.Utility;
 
 enum ProgramOptions

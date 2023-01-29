@@ -1,3 +1,16 @@
+;
+; Author: Bartlomiej Gordon sem.5 2022/2023
+;
+; Topic: Implementation of High - Pass image filter in both: CPPand
+;        ASM with time comparison using given convolution mask:
+;
+;		-1 - 1 - 1
+;		-1   9 - 1
+;		-1 - 1 - 1
+;
+; ASM DLL with algorithm 
+
+
 ;RCX - OldPixels pointer
 ;R8 - Starting index
 ;R9 - End index
@@ -5,10 +18,6 @@
 ;R11 - Negative width
 ;R12 - NewPixels pointer
 
-;MASKA
-;-1 -1 -1
-;-1  9 -1 
-;-1 -1 -1 
 .code
 ExecuteInAssembly proc
 

@@ -1,4 +1,15 @@
-// dllmain.cpp : Defines the entry point for the DLL application.
+﻿//
+// Author: Bartłomiej Gordon sem.5 2022/2023
+//
+// Topic: Implementation of High - Pass image filter in both: CPPand
+//        ASM with time comparison using given convolution mask:
+//
+//		-1 - 1 - 1
+//		-1   9 - 1
+//		-1 - 1 - 1
+//
+// C++ DLL with algorithm 
+
 #include "pch.h"
 #include <cstdint>
 

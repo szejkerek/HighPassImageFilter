@@ -1,8 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//
+// Author: Bartłomiej Gordon sem.5 2022/2023
+//
+// Topic: Implementation of High - Pass image filter in both: CPPand
+//        ASM with time comparison using given convolution mask:
+//
+//		-1 - 1 - 1
+//		-1   9 - 1
+//		-1 - 1 - 1
+//
+// C++ DLL with algorithm 
 
 namespace JA_Projekt.DLL
 {
