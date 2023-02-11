@@ -7,7 +7,7 @@ Using this program, we can filter any Bitmap image using a high-pass filter that
 
 ![Lion](https://user-images.githubusercontent.com/69083596/218283011-ad3b0cc3-9e92-4fe3-a340-8aa070178aed.png)
 
-##**Algorithm implementation in C++:**
+##Algorithm implementation in C++:
 
 Main function that loops through all pixels given for this thread applying mask and saving values in new pixels array.
 ```cpp
@@ -37,7 +37,7 @@ inline int CalculatePixelValue(int index, uint8_t* oldPixels, int width, int dep
 }
 ```
 
-##**Algorithm implementation in Assembly:**
+##Algorithm implementation in Assembly:
 
 ```Assembly
 .code
