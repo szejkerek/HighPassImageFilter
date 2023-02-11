@@ -1,4 +1,5 @@
 ### A program to filter an image using a library written in C++ or Assembly with time comparisons
+⭐ Do not forget to give a star on GitHub!
 ## Bartłomiej Gordon INF sem 5
 
 Using this program, we can filter any Bitmap image using a high-pass filter that removes the average. Implementation of the main algorithm in Assembly guaranteed almost 2x speed-up of execution.
