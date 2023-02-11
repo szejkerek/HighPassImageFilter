@@ -164,6 +164,7 @@ ExecuteInAssembly endp
 end
 ```
 
+Passing arguments from the main program and storing them in the appropriate registers.
 ```Assembly
 mov ebx, dword ptr[rbp + 48]			
 mov r10, rbx							
@@ -178,6 +179,7 @@ add rcx, r8
 add R12, r8	
 ```
 
+Transfer all values surrounding a given pixel to the first half of the XMM1 register.
 ```Assembly
 pinsrb xmm1, byte ptr[RCX + R11 - 3], 0 
 pinsrb xmm1, byte ptr[RCX + R11]    , 1 
@@ -190,6 +192,7 @@ pinsrb xmm1, byte ptr[RCX + R10]    , 6
 pinsrb xmm1, byte ptr[RCX + R10 + 3], 7 
 ```
 
+Multiply the middle mask value by 9 and then subtract from it the sum of the rest of the pixels added together using the vector horizontal addition instruction.
 ```Assembly
 mov eax, 9								
 mul ebx									
@@ -200,7 +203,7 @@ movd ebx, xmm1
 
 sub eax, ebx												
 ```
-
+Clamp the obtained value in the range 0-255
 ```Assembly								
 mov     ebx, 255						
 cmp     eax, ebx							
@@ -208,10 +211,8 @@ cmovg   eax, ebx
 test    eax, eax						
 mov     ebx, 0							
 cmovl   eax, ebx						
-
-mov byte ptr[R12], al	
 ```
-
+Transfer the calculated value to the appropriate place in the new pixel array
 ```Assembly								
 mov byte ptr[R12], al	
 ```
