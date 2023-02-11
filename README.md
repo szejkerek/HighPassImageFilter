@@ -1,7 +1,7 @@
 ### A program to filter an image using a library written in C++ or Assembly with time comparisons
 ## Bartłomiej Gordon INF sem 5
 
-Using this program, we can filter any Bitmap image using a high-pass filter that removes the average.
+Using this program, we can filter any Bitmap image using a high-pass filter that removes the average. Implementation of the main algorithm in Assembly guaranteed almost 2x speed-up of execution.
 
 ## Sample output image:
 
@@ -162,6 +162,58 @@ endLoop:
 ret
 ExecuteInAssembly endp
 end
+```
+
+```Assembly
+mov ebx, dword ptr[rbp + 48]			
+mov r10, rbx							
+
+xor r11, r11							
+sub r11, r10							
+
+mov r12, rdx							
+
+mov rdi, r8								
+add rcx, r8								
+add R12, r8	
+```
+
+```Assembly
+pinsrb xmm1, byte ptr[RCX + R11 - 3], 0 
+pinsrb xmm1, byte ptr[RCX + R11]    , 1 
+pinsrb xmm1, byte ptr[RCX + R11 + 3], 2 
+pinsrb xmm1, byte ptr[RCX - 3]      , 3 
+movzx  ebx , byte ptr[RCX] 				
+pinsrb xmm1, byte ptr[RCX + 3]      , 4 
+pinsrb xmm1, byte ptr[RCX + R10 - 3], 5 
+pinsrb xmm1, byte ptr[RCX + R10]    , 6 
+pinsrb xmm1, byte ptr[RCX + R10 + 3], 7 
+```
+
+```Assembly
+mov eax, 9								
+mul ebx									
+
+pxor xmm2, xmm2							
+psadbw xmm1, xmm2						
+movd ebx, xmm1							
+
+sub eax, ebx												
+```
+
+```Assembly								
+mov     ebx, 255						
+cmp     eax, ebx							
+cmovg   eax, ebx						
+test    eax, eax						
+mov     ebx, 0							
+cmovl   eax, ebx						
+
+mov byte ptr[R12], al	
+```
+
+```Assembly								
+mov byte ptr[R12], al	
 ```
 
 ## The time comparison of the averaged results of both libraries with the error bars calculated from the standard deviation:
