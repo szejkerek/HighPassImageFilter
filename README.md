@@ -15,10 +15,26 @@ float mask[9] = {-1 ,-1 ,-1 ,
                  -1 , 9 ,-1 ,
                  -1 ,-1 ,-1  };
 
-    for (int i = startingIndex; i < endIndex; i ++)
-    {
-        newPixels[i] = CutRange(CalculatePixelValue(i, oldPixels, width, PIXEL_STRIDE, mask));
-    }
+for (int i = startingIndex; i < endIndex; i ++)
+{
+    newPixels[i] = CutRange(CalculatePixelValue(i, oldPixels, width, PIXEL_STRIDE, mask));
+}
+```
+
+Function that apply mask value for given RGB component.
+```cpp
+inline int CalculatePixelValue(int index, uint8_t* oldPixels, int width, int depth, float* mask)
+{
+  return  (oldPixels[index - width - depth]   * mask[0]) +
+          (oldPixels[index - width]           * mask[1]) +
+          (oldPixels[index - width + depth]   * mask[2]) +
+          (oldPixels[index - depth]           * mask[3]) +
+          (oldPixels[index]                   * mask[4]) +
+          (oldPixels[index + depth]           * mask[5]) +
+          (oldPixels[index + width - depth]   * mask[6]) +
+          (oldPixels[index + width]           * mask[7]) +
+          (oldPixels[index + width + depth]   * mask[8]);
+}
 ```
 
 ![wykres](https://user-images.githubusercontent.com/69083596/218283013-534c58a6-caf1-48a5-9d45-abea25cb8601.png)
