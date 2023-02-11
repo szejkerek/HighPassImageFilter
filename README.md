@@ -8,6 +8,7 @@ Sample output image:
 ![Lion](https://user-images.githubusercontent.com/69083596/218283011-ad3b0cc3-9e92-4fe3-a340-8aa070178aed.png)
 
 Algorithm implementation in C++:
+
 Main function that loops through all pixels given for this thread applying mask and saving values in new pixels array.
 ```cpp
 float mask[9] = {-1 ,-1 ,-1 ,
