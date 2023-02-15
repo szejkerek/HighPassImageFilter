@@ -218,6 +218,6 @@ Transfer the calculated value to the appropriate place in the new pixel array
 mov byte ptr[R12], al	
 ```
 
-## The time comparison of the averaged results of both libraries with the error bars calculated from the standard deviation:
+## The time comparison of the averaged results of both libraries run on different number of threads with the error bars calculated from the standard deviation:
 
 ![wykres](https://user-images.githubusercontent.com/69083596/218283013-534c58a6-caf1-48a5-9d45-abea25cb8601.png)
