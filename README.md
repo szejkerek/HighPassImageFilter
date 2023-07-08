@@ -1,14 +1,13 @@
 ### A program to filter an image using a library written in C++ or Assembly with time comparisons
-## Bartłomiej Gordon INF sem 5
-`⭐ Do not forget to give a star on GitHub!`
+#### Bartłomiej Gordon INF sem 5
 
 Using this program, we can filter any Bitmap image using a high-pass filter that removes the average. Implementation of the main algorithm in Assembly guaranteed almost 2x speed-up of execution.
 
-## Sample output image:
+#### Sample output image:
 
 ![Lion](https://user-images.githubusercontent.com/69083596/218283011-ad3b0cc3-9e92-4fe3-a340-8aa070178aed.png)
 
-## Algorithm implementation in C++:
+#### Algorithm implementation in C++:
 
 ```cpp
 inline int CalculatePixelValue(int index, uint8_t* oldPixels, int width, int depth, float* mask)
@@ -104,7 +103,7 @@ inline uint8_t CutRange(int value)
 }
 ```
 
-## Algorithm implementation in Assembly:
+#### Algorithm implementation in Assembly:
 
 ```Assembly
 .code
@@ -218,6 +217,6 @@ Transfer the calculated value to the appropriate place in the new pixel array
 mov byte ptr[R12], al	
 ```
 
-## The time comparison of the averaged results of both libraries run on different number of threads with the error bars calculated from the standard deviation:
+#### The time comparison of the averaged results of both libraries run on different number of threads with the error bars calculated from the standard deviation:
 
 ![wykres](https://user-images.githubusercontent.com/69083596/218283013-534c58a6-caf1-48a5-9d45-abea25cb8601.png)
